@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: v1
 data:
   statsd-client.sh: |
     #!/usr/bin/env bash
