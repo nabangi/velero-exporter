@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: StatefulSet
+spec:
+  template:
+    metadata:
+      labels:
+        name: prometheus-deployment
+      name: prometheus
+      annotations:
+        backup.velero.io/backup-volumes: data,logging
+        backup.velero.io/backup-volumes-excludes: tmp
+

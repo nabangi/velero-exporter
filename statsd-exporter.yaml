@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: statsd-exporter
@@ -79,5 +79,8 @@ spec:
     port: 9102 #port to fetch metrics from
     protocol: TCP
     targetPort: 9102
+#  selector:
+#    matchLabels:
+#      app: statsd-exporter
   selector:
     app: statsd-exporter
